@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xule Zhou | Personal Website</title>
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-sub: #555555;
+            --line: #eeeeee;
+            --accent: #000000;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        header {
+            margin-bottom: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-info {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .contact-info span { margin-right: 18px; }
+
+        .lang-switch {
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border: 1px solid var(--line);
+            background: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .lang-switch:hover { background: #f9f9f9; }
+
+        section { margin-bottom: 50px; }
+
+        h2 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
+
+        .item { margin-bottom: 35px; }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .title { font-weight: 600; font-size: 0.95rem; }
+        .date { font-size: 0.8rem; color: var(--text-sub); font-variant-numeric: tabular-nums; }
+        .subtitle { font-size: 0.88rem; color: var(--text-sub); margin-bottom: 10px; }
+
+        ul { padding-left: 18px; margin: 10px 0; color: var(--text-sub); font-size: 0.88rem; }
+        li { margin-bottom: 6px; }
+
+        .pub-box {
+            padding: 15px 0;
+            font-size: 0.88rem;
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .pub-box a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
+
+        [lang="zh"] { display: none; }
+        body.zh-mode [lang="zh"] { display: block; }
+        body.zh-mode [lang="en"] { display: none; }
+
+        footer {
+            margin-top: 100px;
+            font-size: 0.75rem;
+            color: #ccc;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .item-header { flex-direction: column; }
+            .date { margin-top: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-left">
+            <h1 lang="en">Xule Zhou</h1>
+            <h1 lang="zh">周栩乐</h1>
+            <div class="contact-info">
+                <span>📧 bread.zhou@hotmail.com</span>
+                <span>📞 (+86) 188-9675-5660</span>
+                <span>📍 Suzhou, China</span>
+            </div>
+        </div>
+        <button class="lang-switch" onclick="document.body.classList.toggle('zh-mode')">CH / EN</button>
+    </header>
+
+    <section>
+        <h2 lang="en">Education</h2>
+        <h2 lang="zh">教育背景</h2>
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">Xi'an Jiaotong-Liverpool University (XJTLU) / University of Liverpool (UoL)</span>
+                <span class="title" lang="zh">西交利物浦大学 / 英国利物浦大学</span>
+                <span class="date">2023.09 — 2027.06</span>
+            </div>
+            <div class="subtitle">
+                <span lang="en">B.Eng. in Microelectronics Science and Engineering</span>
+                <span lang="zh">微电子科学与工程 工学学士</span>
+            </div>
+            <ul>
+                <li><strong>GPA: 3.9 / 4.0</strong> (Top 10%) | <strong>IELTS: 7.0</strong></li>
+                <li lang="en"><strong>Key Courses:</strong> Analog/Digital Circuits, C/C++ Programming, IC Design & Manufacturing, Microprocessor Systems (Assembly), Electromagnetics & Mechatronics, Embedded C, Data Structures & Algorithms, Computer Architecture, Computer Network.</li>
+                <li lang="zh"><strong>核心课程：</strong> 模拟电路、数字电路、C/C++程序设计、集成电路设计与制造、微处理器系统（汇编）、电磁学与机电学、嵌入式C语言开发、数据结构与算法、计算机组成原理、计算机网络。</li>
+                <li lang="en"><strong>Pending:</strong> Digital VLSI System Design, CMOS Digital IC, HDL & Verilog.</li>
+                <li lang="zh"><strong>即将修读：</strong> 数字VLSI系统设计、CMOS数字集成电路、HDL与Verilog等。</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 lang="en">Publication</h2>
+        <h2 lang="zh">学术论文</h2>
+        <div class="pub-box">
+            Yiqing Zhou, <strong>Xule Zhou</strong>, Zecan Cheng, Chenao Lu, et al., "Impact of environmental factors on LoRa 2.4 GHz time of flight ranging outdoors," <em>accepted for presentation at GCA'25</em>, Sep. 2025. <br>
+            <a href="https://arxiv.org/abs/2509.23125" target="_blank">[arXiv:2509.23125]</a>
+        </div>
+    </section>
+
+    <section>
+        <h2 lang="en">Research & Projects</h2>
+        <h2 lang="zh">科研与项目经历</h2>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">Marine AIS Signal Reception & Decoding</span>
+                <span class="title" lang="zh">低成本船用AIS信号接收与解码研究</span>
+                <span class="date">2025.10 — Present</span>
+            </div>
+            <ul>
+                <li lang="en">Researching low-cost GMSK demodulation algorithms for real-time maritime signal processing.</li>
+                <li lang="zh">研究用于实时海事信号处理的低成本GMSK解调算法。</li>
+                <li lang="en">Optimizing software-defined radio (SDR) performance to improve decoding sensitivity on embedded platforms.</li>
+                <li lang="zh">优化软件定义无线电（SDR）性能，以提升嵌入式平台上的解码灵敏度。</li>
+                <li lang="en">Exploring hardware-defined architectures to maintain high data throughput in complex RF environments.</li>
+                <li lang="zh">探索硬件定义架构，旨在复杂电磁环境下保持高数据吞吐量。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">IoT Environment Monitor (Full-stack)</span>
+                <span class="title" lang="zh">物联网环境监测系统（全栈开发）</span>
+                <span class="date">2025.09 — 2025.12</span>
+            </div>
+            <ul>
+                <li lang="en">Architected a multi-tasking system using <strong>FreeRTOS</strong> with mutex locks and I2C bus protection.</li>
+                <li lang="zh">基于 <strong>FreeRTOS</strong> 架构了多任务系统，实现了互斥锁与I2C总线保护机制。</li>
+                <li lang="en">Developed a complete <strong>Web UI</strong> with integrated front-end and back-end communication.</li>
+                <li lang="zh">开发了完整的 <strong>Web UI</strong>，并实现了稳定可靠的前后端双向通信。</li>
+                <li lang="en">Optimized high-frequency data sampling and storage for long-term environmental monitoring.</li>
+                <li lang="zh">优化了高频数据采样与存储，确保系统在长期环境监测中的稳定性。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">2.4GHz LoRa + DNN Ranging System</span>
+                <span class="title" lang="zh">基于LoRa与深度学习的测距定位系统</span>
+                <span class="date">2025.06 — 2025.09</span>
+            </div>
+            <ul>
+                <li lang="en">Designed a customized protocol achieving <strong>±10cm accuracy</strong> within an outdoor range of 3km.</li>
+                <li lang="zh">设计了自定义通信协议，在3km室外范围内实现了 <strong>±10cm 测距精度</strong>。</li>
+                <li lang="en">Led the hardware selection and firmware development for the DNN-assisted ranging framework.</li>
+                <li lang="zh">主导了DNN辅助测距框架的硬件选型与底层固件开发。</li>
+                <li lang="en">Conducted extensive field testing to identify and mitigate various environmental interference factors.</li>
+                <li lang="zh">进行了大量的野外实测，识别并减弱了多种环境干扰因素。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">F1 Racing Simulator Hardware Development</span>
+                <span class="title" lang="zh">F1 赛车模拟器硬件架构开发</span>
+                <span class="date">2024.02 — 2025.06</span>
+            </div>
+            <ul>
+                <li lang="en">Directed the full lifecycle from schematic design and PCB layout to industrial production.</li>
+                <li lang="zh">主导了从原理图设计、PCB绘制到工业级量产的全流程开发。</li>
+                <li lang="en">Optimized power paths and signal integrity to ensure ultra-low latency for high-speed simulation.</li>
+                <li lang="zh">优化了电源路径与信号完整性，确保了高速模拟下的超低延迟。</li>
+                <li lang="en">Collaborated with global stakeholders to deliver products now sold in international markets.</li>
+                <li lang="zh">与多方合作，产品最终成功销往全球海内外市场。</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 lang="en">Awards & Honors</h2>
+        <h2 lang="zh">奖项与荣誉</h2>
+        <div class="item-header">
+            <span lang="en">University Academic Achievement Award (Top 10%)</span>
+            <span lang="zh">西交利物浦大学 成就奖学金 (年度前10%)</span>
+            <span class="date">2024 — 2025</span>
+        </div>
+    </section>
+
+    <section>
+        <h2 lang="en">Personal Interests</h2>
+        <h2 lang="zh">个人兴趣</h2>
+        <ul>
+            <li lang="en"><strong>Cybersecurity:</strong> Enthusiastic beginner exploring network security, penetration testing, and system hardening.</li>
+            <li lang="zh"><strong>计算机与网安：</strong> 处于入门探索阶段的网安爱好者，关注渗透测试、系统加固等基础领域。</li>
+            <li lang="en"><strong>Visual Arts:</strong> Passionate about photography and drone aerial filming, capturing the harmony of tech and nature.</li>
+            <li lang="zh"><strong>视觉艺术：</strong> 热爱摄影与航拍，致力于记录科技与自然共生的视觉瞬间。</li>
+            <li lang="en"><strong>Systemic Thinking:</strong> Interested in the underlying laws of economics and finance; exploring how global systems operate.</li>
+            <li lang="zh"><strong>系统思维：</strong> 对经济学与金融学有浓厚兴趣，探究驱动全球系统运行的底层规律。</li>
+            <li lang="en"><strong>Efficiency:</strong> Focused on productivity methodologies and long-term feedback; valuing sustainable growth.</li>
+            <li lang="zh"><strong>效率主义：</strong> 关注提升生产力的方法论，注重“长期主义”带来的反馈与个人成长。</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 Xule Zhou. Updated: March 2026.</p>
+    </footer>
+</div>
+
+</body>
+</html>
