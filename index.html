@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xule Zhou | Personal Website</title>
+    <title>Xule Zhou | 周栩乐</title>
     <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -72,6 +72,24 @@
             border-bottom: 1px solid var(--line);
             padding-bottom: 8px;
             margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 28px 0 12px 0;
+            color: var(--text-main);
+
+            text-transform: none;
+            letter-spacing: normal;
+            border-bottom: none;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 5px;
         }
 
         .item { margin-bottom: 35px; }
@@ -188,8 +206,8 @@
 
         <div class="item">
             <div class="item-header">
-                <span class="title" lang="en">IoT Environment Monitor (Full-stack)</span>
-                <span class="title" lang="zh">物联网环境监测系统（全栈开发）</span>
+                <span class="title" lang="en">ESP32 IoT Environment Monitor (Full-stack)</span>
+                <span class="title" lang="zh">ESP32物联网环境监测系统（全栈开发）</span>
                 <span class="date">2025.09 — 2025.12</span>
             </div>
             <ul>
@@ -206,15 +224,31 @@
             <div class="item-header">
                 <span class="title" lang="en">2.4GHz LoRa + DNN Ranging System</span>
                 <span class="title" lang="zh">基于LoRa与深度学习的测距定位系统</span>
-                <span class="date">2025.06 — 2025.09</span>
+                <span class="date">2025.06 — 2025.11</span>
             </div>
             <ul>
                 <li lang="en">Designed a customized protocol achieving <strong>±10cm accuracy</strong> within an outdoor range of 3km.</li>
                 <li lang="zh">设计了自定义通信协议，在3km室外范围内实现了 <strong>±10cm 测距精度</strong>。</li>
-                <li lang="en">Led the hardware selection and firmware development for the DNN-assisted ranging framework.</li>
-                <li lang="zh">主导了DNN辅助测距框架的硬件选型与底层固件开发。</li>
+                <li lang="en">Led the hardware selection (STM32 & ESP32) and firmware development for the DNN-assisted ranging framework.</li>
+                <li lang="zh">主导了DNN辅助测距框架的硬件选型（STM32 & ESP32）与底层固件开发。</li>
                 <li lang="en">Conducted extensive field testing to identify and mitigate various environmental interference factors.</li>
                 <li lang="zh">进行了大量的野外实测，识别并减弱了多种环境干扰因素。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">2025 XJTLU Unmanned Robotics Boat Challenge</span>
+                <span class="title" lang="zh">2025 西交利物浦大学无人船挑战赛</span>
+                <span class="date">2025.06 — 2025.08</span>
+            </div>
+            <ul>
+                <li lang="en">Responsible for motor control and differential steering implementation for the unmanned boat.</li>
+                <li lang="zh">负责电调驱动和差速法实现船体转向。</li>
+                <li lang="en">Tuned a PID control algorithm for heading stability, effectively compensating for motor performance differences.</li>
+                <li lang="zh">调试了PID控制算法用于航向稳定，有效弥补了两电机性能差异。</li>
+                <li lang="en">Integrated IMU inertial measurement unit for real-time attitude feedback, achieving precise closed-loop control of differential steering under high-speed navigation.</li>
+                <li lang="zh">集成IMU惯性测量单元提供实时姿态反馈，实现了高速航行状态下差速转向的精准闭环控制。</li>
             </ul>
         </div>
 
@@ -258,6 +292,47 @@
             <li lang="en"><strong>Efficiency:</strong> Focused on productivity methodologies and long-term feedback; valuing sustainable growth.</li>
             <li lang="zh"><strong>效率主义：</strong> 关注提升生产力的方法论，注重“长期主义”带来的反馈与个人成长。</li>
         </ul>
+    </section>
+
+    <section>
+        <h2 lang="en">Toolkits</h2>
+        <h2 lang="zh">工具包</h2>
+
+        <div class="toolkit-category">
+            <h3 lang="en">Programming Languages</h3>
+            <h3 lang="zh">编程语言</h3>
+            <div class="badge-list">
+                <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=C&logoColor=white&labelColor=A8B9CC" alt="C" />
+
+                <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white&labelColor=00599C" alt="C++" />
+
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=3776AB" alt="Python" />
+            </div>
+        </div>
+
+        <div class="toolkit-category">
+            <h3 lang="en">Embedded Platforms</h3>
+            <h3 lang="zh">嵌入式平台</h3>
+            <div class="badge-list">
+                <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white&labelColor=03234B" alt="STM32" />
+                
+                <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white&labelColor=E7352C" alt="ESP32" />
+
+                <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white&labelColor=00979D" alt="Arduino" />
+            </div>
+        </div>
+
+        <div class="toolkit-category">
+            <h3 lang="en">Operating Systems</h3>
+            <h3 lang="zh">操作系统</h3>
+            <div class="badge-list">
+                <img src="https://img.shields.io/badge/Windows-00BBFF?style=for-the-badge&logo=windows&logoColor=white&labelColor=00BBFF" alt="Windows" />
+
+                <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=FCC624" alt="Linux" />
+
+                <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=3DDC84" alt="Android" /></div>
+        </div>
+
     </section>
 
     <footer>
