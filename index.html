@@ -234,23 +234,15 @@
                 <span class="date">2025.09 — 2025.12</span>
             </div>
             <ul>
-                <li lang="en">Original PlatformIO + ESP32 design implementing full hardware and firmware solution from scratch, including component selection, schematics, PCB, firmware development, and enclosure modeling &amp; iteration.</li>
-                <li lang="zh">基于 PlatformIO + ESP32 的原创设计，从零实现硬件与固件的整套方案，包括方案选型、原理图、PCB、固件开发、外壳建模与迭代。</li>
-                <li lang="en">UI design and integration using SquareLine Studio with LVGL 9.1.0 to build a touch-enabled embedded interface.</li>
-                <li lang="zh">使用 SquareLine Studio 搭配 LVGL 9.1.0 进行界面设计与集成，构建触控式嵌入式 UI。</li>
-                <li lang="en">Implemented a dashboard displaying 11 environmental metrics; supports gesture swipe, tap-to-open charts, and dropdown menu interactions to improve operability.</li>
-                <li lang="zh">实现包含 11 项环境监测数据的仪表盘，支持手势滑动、点击弹出图表与下拉菜单交互，提升可操作性。</li>
-                <li lang="en">Touch system based on XPT2046 controller, using triple sampling, pressure thresholds and stability checks to reduce noise and false touches.</li>
-                <li lang="zh">基于 XPT2046 触摸芯片，采用三次采样、压力门限与稳定性校验策略，有效降低噪声与误触。</li>
-                <li lang="en">Developed interactive line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
-                <li lang="zh">开发可交互折线图功能，支持 1 分钟 / 1 小时 / 24 小时三档窗口实时刷新，使用环形缓冲聚合数据并展示历史趋势。</li>
+                <li lang="en">Original PlatformIO + ESP32 design using SquareLine Studio with LVGL 9.1.0, implementing full hardware and firmware solution from scratch, including component selection, schematics, PCB, firmware development, and enclosure modeling and iteration.</li>
+                <li lang="zh">基于 PlatformIO + ESP32 的原创设计，使用 SquareLine Studio 搭配 LVGL 9.1.0 进行界面设计与集成，从零实现硬件与固件的整套方案，包括方案选型、原理图、PCB、固件开发、外壳建模与迭代。</li>
                 <li lang="en"><strong>FreeRTOS</strong>-based task scheduling for I2C (SHT40, SGP41, SCD4x, BMP280, PM sensors), UART (formaldehyde sensor), and data reporting; periodic precise timing ensures stable sampling for robust multi-sensor scheduling.</li>
                 <li lang="zh">基于 <strong>FreeRTOS</strong> 设计任务调度，包括I2C（SHT40、SGP41、SCD4x、BMP280、PM颗粒物传感器），串口（甲醛传感器）和数据上报等，使用周期性精确定时保证采样稳定性，实现鲁棒的多传感器调度。</li>
                 <li lang="en">Protected the I2C bus with FreeRTOS mutexes and used a non-blocking queue enqueue strategy to return sensor data, avoiding blocking and race conditions.</li>
                 <li lang="zh">为保护 I2C 总线实现 FreeRTOS 互斥锁，并采用消息队列的非阻塞入队策略将传感器数据回传，避免阻塞与竞态条件。</li>
-                <li lang="en">Integrated vendor VOC/NOx index algorithms to convert raw sensor readings into engineering indices, incorporated into UI, history, and alert logic.</li>
-                <li lang="zh">集成厂商 VOC/NOx 指数算法，将原始传感器数据转换为工程化指数并纳入 UI/历史与告警逻辑。</li>
-                <li lang="en">Implemented a complete visual web page and HTTPS-based JSON reporting module; integrated with Supabase Functions for backend database and dashboard presentation.</li>
+                <li lang="en">Implemented a dashboard displaying 11 environmental metrics; supports gesture swipe, tap-to-open charts, and dropdown menu interactions, with line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
+                <li lang="zh">实现包含 11 项环境监测数据的仪表盘，支持手势滑动、点击弹出图表与下拉菜单交互，以及支持 1 分钟 / 1 小时 / 24 小时三档窗口实时刷新的折线图，使用环形缓冲聚合数据并展示历史趋势。</li>
+                <li lang="en">Developed interactive line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
                 <li lang="zh">实现了完整的可视化 web 页面和基于 HTTPS 的 JSON 上报模块，接入 Supabase Functions，便于后端数据库与前端面板展示。</li>
                 <li lang="en">Configured SPIFFS filesystem for persistence and local configuration storage; modular, decoupled code structure for easy future extension.</li>
                 <li lang="zh">配置SPIFFS文件系统以支持持久化与本地配置存储，代码模块化解耦便于后续扩展。</li>
