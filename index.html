@@ -118,9 +118,11 @@
 
         .pub-box a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
 
-        [lang="zh"] { display: none; }
-        body.zh-mode [lang="zh"] { display: block; }
-        body.zh-mode [lang="en"] { display: none; }
+          [lang="zh"] { display: none; }
+          /* Use `revert` so elements reset to their user-agent defaults
+              (e.g. `li` becomes `list-item`, headings become `block`) */
+          body.zh-mode [lang="zh"] { display: revert; }
+          body.zh-mode [lang="en"] { display: none; }
 
         footer {
             margin-top: 100px;
@@ -166,13 +168,14 @@
                 <span lang="zh">微电子科学与工程 工学学士</span>
             </div>
             <ul>
-                <li><strong>GPA: 3.7 / 4.0</strong> (Top 10%) | <strong>IELTS: 7.0</strong></li>
+                <li lang="en"><strong>GPA: 3.7 / 4.0</strong> (Top 10%) | <strong>IELTS: 7.0</strong></li>
+                <li lang="zh"><strong>绩点: 3.7 / 4.0</strong> (前10%) | <strong>雅思: 7.0</strong></li>
                 <li lang="en"><strong>Key Courses:</strong> Analog/Digital Circuits, C/C++ Programming, IC Design & Manufacturing, Microprocessor Systems, Electromagnetics & Mechatronics, Embedded C, Data Structures & Algorithms, Computer Architecture, Computer Network, Digital VLSI System Design, CMOS Digital IC, HDL & Verilog.</li>
                 <li lang="zh"><strong>核心课程：</strong> 模拟电路、数字电路、C/C++程序设计、集成电路设计与制造、微处理器系统、电磁学与机电学、嵌入式C语言开发、数据结构与算法、计算机组成原理、计算机网络、数字VLSI系统设计、CMOS数字集成电路、HDL与Verilog等。</li>
             </ul>
         </div>
     </section>
-    </section>
+
 
     <section>
         <h2 lang="en">Personal Abilities</h2>
@@ -188,12 +191,20 @@
                     <span lang="zh"><strong>产品交付：</strong>能够根据需求独立完成器件选型、原理图绘制、PCB 绘制、固件开发、焊接测试与调试的完整流程。</span>
                 </li>
                 <li>
+                    <span lang="en"><strong>AI-Augmented Development:</strong> Skilled at integrating AI into daily coding and debugging workflows, adept at using AI to create productivity tools and scripts, and curious about applying AI to embedded software debugging (breakpoints, analyzing backtraces/coredump, etc.).</span>
+                    <span lang="zh"><strong>AI增强开发：</strong>熟练将 AI 融入日常代码编写与调试流程，善于使用 AI 编写提高效率的工具与脚本，感兴趣探索 AI 在嵌入式软件调试中的能力（如打断点、根据 backtrace/coredump 定位问题等）。</span>
+                </li>
+                <li>
                     <span lang="en"><strong>Technical Troubleshooting:</strong> Proficient in reading datasheets and reference manuals; experienced at locating hardware faults and performing software debug independently.</span>
                     <span lang="zh"><strong>问题定位：</strong>熟练阅读数据手册与参考手册，能独立完成硬件问题定位与软件级 Debug。</span>
                 </li>
                 <li>
                     <span lang="en"><strong>Production Mindset:</strong> Adapt commercial reference designs into production-ready solutions with attention to BOM cost, manufacturability and process optimization.</span>
                     <span lang="zh"><strong>量产意识：</strong>参考商业方案并进行二次设计，具备实际量产意识，关注 BOM 成本与工艺流程优化。</span>
+                </li>
+                <li>
+                    <span lang="en"><strong>DevOps & Web Deployment:</strong> Familiar with basic Linux command-line operations, proficient in Git version control, experienced using GitHub and OSHWHUB, and skilled in deploying frontend/backend web applications (React, Next.js, Vue, etc.).</span>
+                    <span lang="zh"><strong>开发运维与网站部署：</strong>熟悉 Linux 常用命令行操作，熟练掌握 Git 版本控制，使用 GitHub 与立创开源硬件平台，具备前后端网站部署经验（React、Next.js、Vue 等）。</span>
                 </li>
             </ul>
         </div>
@@ -213,17 +224,39 @@
 
         <div class="item">
             <div class="item-header">
+                <span class="title" lang="en">RK3568-based Industrial-grade High-performance Visual Perception System</span>
+                <span class="title" lang="zh">基于 RK3568 的工业级高性能视觉感知系统开发</span>
+                <span class="date">2026.04 — Present</span>
+            </div>
+            <ul>
+                <li lang="en"><strong>Core stack:</strong> C++ (11/14), Python 3.8, YOLOv8, ONNX Runtime, RKNPU2, OpenCV, CMake, RTSP/H.265, ARM cross-compilation.</li>
+                <li lang="zh"><strong>核心技术栈：</strong>C++ (11/14)、Python 3.8、YOLOv8、ONNX Runtime、RKNPU2、OpenCV、CMake、RTSP/H.265、ARM 交叉编译。</li>
+                <li lang="en"><strong>Project overview:</strong> Delivered a production-ready visual recognition system from PC prototype to RK3568 embedded by migrating algorithms from Python to C++ and leveraging NPU acceleration to solve edge compute limits, latency and RTSP backlog issues.</li>
+                <li lang="zh"><strong>项目概述：</strong>将 PC 端原型迁移到 RK3568 嵌入式平台，算法由 Python 转为 C++，并利用 NPU 加速，解决边缘算力受限、实时性差与 RTSP 流堆积等工程难题。</li>
+                <li lang="en"><strong>Cross-platform inference:</strong> Built ONNX Runtime C++ pipeline on x86_64 with release optimizations and zero-copy memory; converted ONNX→RKNN on ARM64 and implemented INT8/FP16 quantization to fully utilize the RK3568 NPU.</li>
+                <li lang="zh"><strong>跨平台推理：</strong>在 x86_64 上使用 ONNX Runtime C++ 构建高性能推理管线，采用 Release 优化与零拷贝；在 ARM64 上完成 ONNX→RKNN 转换并实现 INT8/FP16 量化以释放 NPU 性能。</li>
+                <li lang="en"><strong>Algorithm & operator tuning:</strong> Fixed normalization-scaling mismatch causing false positives; implemented adaptive geometric mapping to align coordinates between 1080P/4K streams and 640x640 model inputs; integrated optimized NMS and resolved C++ linking symbols.</li>
+                <li lang="zh"><strong>算法与算子级优化：</strong>修复了归一化尺度冲突导致的误报；实现自适应几何映射以解决高分辨率与模型输入间的坐标偏移；集成高效 NMS 并解决链接阶段符号缺失问题。</li>
+                <li lang="en"><strong>RTSP/H.265 stability:</strong> Designed frame-dropping buffer management to reduce 3–5s backlog to sub-100ms end-to-end latency; handled POC missing-frame and cu_qp_delta anomalies to prevent artifacts under network jitter.</li>
+                <li lang="zh"><strong>流媒体稳定性：</strong>设计基于抽帧的缓冲管理将 3–5s 堆积延迟降至 <100ms；捕获并处理 POC 丢帧与 cu_qp_delta 异常，降低网络抖动下的花屏/灰屏故障。</li>
+                <li lang="en"><strong>Engineering & delivery:</strong> Built CMake toolchain cross-compile with sysroot for dynamic linking of ARM OpenCV; used dependency analysis tools to resolve complex runtime library conflicts for robust deployment.</li>
+                <li lang="zh"><strong>工程化与交付：</strong>搭建基于 CMake Toolchain 的交叉编译与 Sysroot 部署方案，实现 ARM OpenCV 动态链接；使用依赖分析工具定位并解决运行时库冲突，保障部署可靠性。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
                 <span class="title" lang="en">Marine AIS Signal Reception & Decoding</span>
                 <span class="title" lang="zh">低成本船用AIS信号接收与解码研究</span>
                 <span class="date">2025.10 — Present</span>
             </div>
             <ul>
-                <li lang="en">Researching low-cost GMSK demodulation algorithms for real-time maritime signal processing.</li>
-                <li lang="zh">研究用于实时海事信号处理的低成本GMSK解调算法。</li>
-                <li lang="en">Optimizing software-defined radio (SDR) performance to improve decoding sensitivity on embedded platforms.</li>
-                <li lang="zh">优化软件定义无线电（SDR）性能，以提升嵌入式平台上的解码灵敏度。</li>
-                <li lang="en">Exploring hardware-defined architectures to maintain high data throughput in complex RF environments.</li>
-                <li lang="zh">探索硬件定义架构，旨在复杂电磁环境下保持高数据吞吐量。</li>
+                <li lang="en"><strong>GMSK Demodulation & SDR:</strong> Researching low-cost GMSK demodulation algorithms for real-time maritime signal processing.</li>
+                <li lang="zh"><strong>GMSK 解调与 SDR：</strong>研究用于实时海事信号处理的低成本 GMSK 解调算法。</li>
+                <li lang="en"><strong>Performance Optimization:</strong> Optimizing software-defined radio (SDR) performance to improve decoding sensitivity on embedded platforms.</li>
+                <li lang="zh"><strong>性能优化：</strong>优化软件定义无线电（SDR）性能，以提升嵌入式平台上的解码灵敏度。</li>
+                <li lang="en"><strong>Hardware Throughput:</strong> Exploring hardware-defined architectures to maintain high data throughput in complex RF environments.</li>
+                <li lang="zh"><strong>硬件吞吐：</strong>探索硬件定义架构，旨在复杂电磁环境下保持高数据吞吐量。</li>
             </ul>
         </div>
 
@@ -234,18 +267,18 @@
                 <span class="date">2025.09 — 2025.12</span>
             </div>
             <ul>
-                <li lang="en">Original PlatformIO + ESP32 design using SquareLine Studio with LVGL 9.1.0, implementing full hardware and firmware solution from scratch, including component selection, schematics, PCB, firmware development, and enclosure modeling and iteration.</li>
-                <li lang="zh">基于 PlatformIO + ESP32 的原创设计，使用 SquareLine Studio 搭配 LVGL 9.1.0 进行界面设计与集成，从零实现硬件与固件的整套方案，包括方案选型、原理图、PCB、固件开发、外壳建模与迭代。</li>
-                <li lang="en"><strong>FreeRTOS</strong>-based task scheduling for I2C (SHT40, SGP41, SCD4x, BMP280, PM sensors), UART (formaldehyde sensor), and data reporting; periodic precise timing ensures stable sampling for robust multi-sensor scheduling.</li>
-                <li lang="zh">基于 <strong>FreeRTOS</strong> 设计任务调度，包括I2C（SHT40、SGP41、SCD4x、BMP280、PM颗粒物传感器），串口（甲醛传感器）和数据上报等，使用周期性精确定时保证采样稳定性，实现鲁棒的多传感器调度。</li>
-                <li lang="en">Protected the I2C bus with FreeRTOS mutexes and used a non-blocking queue enqueue strategy to return sensor data, avoiding blocking and race conditions.</li>
-                <li lang="zh">为保护 I2C 总线实现 FreeRTOS 互斥锁，并采用消息队列的非阻塞入队策略将传感器数据回传，避免阻塞与竞态条件。</li>
-                <li lang="en">Implemented a dashboard displaying 11 environmental metrics; supports gesture swipe, tap-to-open charts, and dropdown menu interactions, with line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
-                <li lang="zh">实现包含 11 项环境监测数据的仪表盘，支持手势滑动、点击弹出图表与下拉菜单交互，以及支持 1 分钟 / 1 小时 / 24 小时三档窗口实时刷新的折线图，使用环形缓冲聚合数据并展示历史趋势。</li>
-                <li lang="en">Developed interactive line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
-                <li lang="zh">实现了完整的可视化 web 页面和基于 HTTPS 的 JSON 上报模块，接入 Supabase Functions，便于后端数据库与前端面板展示。</li>
-                <li lang="en">Configured SPIFFS filesystem for persistence and local configuration storage; modular, decoupled code structure for easy future extension.</li>
-                <li lang="zh">配置SPIFFS文件系统以支持持久化与本地配置存储，代码模块化解耦便于后续扩展。</li>
+                <li lang="en"><strong>Full-stack PlatformIO Design:</strong> Original PlatformIO + ESP32 design using SquareLine Studio with LVGL 9.1.0, implementing full hardware and firmware solution from scratch, including component selection, schematics, PCB, firmware development, and enclosure modeling and iteration.</li>
+                <li lang="zh"><strong>整套方案设计：</strong>基于 PlatformIO + ESP32 的原创设计，使用 SquareLine Studio 搭配 LVGL 9.1.0 进行界面设计与集成，从零实现硬件与固件的整套方案，包括方案选型、原理图、PCB、固件开发、外壳建模与迭代。</li>
+                <li lang="en"><strong>RTOS Scheduling:</strong> <strong>FreeRTOS</strong>-based task scheduling for I2C (SHT40, SGP41, SCD4x, BMP280, PM sensors), UART (formaldehyde sensor), and data reporting; periodic precise timing ensures stable sampling for robust multi-sensor scheduling.</li>
+                <li lang="zh"><strong>RTOS 调度：</strong>基于 <strong>FreeRTOS</strong> 设计任务调度，包括 I2C（SHT40、SGP41、SCD4x、BMP280、PM 传感器）、串口（甲醛传感器）与数据上报，使用周期性精确定时保证采样稳定性，实现鲁棒的多传感器调度。</li>
+                <li lang="en"><strong>Bus Protection:</strong> Protected the I2C bus with FreeRTOS mutexes and used a non-blocking queue enqueue strategy to return sensor data, avoiding blocking and race conditions.</li>
+                <li lang="zh"><strong>总线保护：</strong>为保护 I2C 总线实现 FreeRTOS 互斥锁，并采用消息队列的非阻塞入队策略将传感器数据回传，避免阻塞与竞态条件。</li>
+                <li lang="en"><strong>UX & Dashboards:</strong> Implemented a dashboard displaying 11 environmental metrics; supports gesture swipe, tap-to-open charts, and dropdown menu interactions, with line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
+                <li lang="zh"><strong>界面与图表：</strong>实现包含 11 项环境监测数据的仪表盘，支持手势滑动、点击弹出图表与下拉菜单交互，并支持 1 分钟 / 1 小时 / 24 小时 三档窗口实时刷新的折线图，使用环形缓冲聚合数据并展示历史趋势。</li>
+                <li lang="en"><strong>Visualization Backend:</strong> Developed interactive line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
+                <li lang="zh"><strong>可视化后端：</strong>实现了完整的可视化网页与基于 HTTPS 的 JSON 上报模块，接入 Supabase Functions，便于后端数据库与前端面板展示。</li>
+                <li lang="en"><strong>Persistence & Modularity:</strong> Configured SPIFFS filesystem for persistence and local configuration storage; modular, decoupled code structure for easy future extension.</li>
+                <li lang="zh"><strong>持久化与模块化：</strong>配置 SPIFFS 文件系统以支持持久化与本地配置存储，代码模块化解耦便于后续扩展。</li>
             </ul>
         </div>
 
@@ -256,12 +289,12 @@
                 <span class="date">2025.06 — 2025.11</span>
             </div>
             <ul>
-                <li lang="en">Based on <strong>Semtech SX127x and SX128x </strong> series RF frontend chips, achieved <strong>±10cm accuracy</strong> within an outdoor range of 3km.</li>
-                <li lang="zh">基于 <strong>Semtech SX127x 和 SX128x </strong>系列射频前端芯片，在3km室外范围内实现了 <strong>±10cm 测距精度</strong>。</li>
-                <li lang="en">Led the hardware selection (STM32 & ESP32) and firmware development for the DNN-assisted ranging framework.</li>
-                <li lang="zh">主导了DNN辅助测距框架的硬件选型（STM32 & ESP32）与底层固件开发。</li>
-                <li lang="en">Conducted extensive field testing to identify and mitigate various environmental interference factors.</li>
-                <li lang="zh">进行了大量的野外实测，识别并减弱了多种环境干扰因素。</li>
+                <li lang="en"><strong>RF Frontend & Accuracy:</strong> Based on <strong>Semtech SX127x and SX128x</strong> series RF frontend chips, achieved <strong>±10cm accuracy</strong> within an outdoor range of 3km.</li>
+                <li lang="zh"><strong>射频与精度：</strong>基于 <strong>Semtech SX127x 和 SX128x</strong> 系列射频前端芯片，在 3km 室外范围内实现了 <strong>±10cm 测距精度</strong>。</li>
+                <li lang="en"><strong>HW & FW Lead:</strong> Led the hardware selection (STM32 & ESP32) and firmware development for the DNN-assisted ranging framework.</li>
+                <li lang="zh"><strong>硬件与固件领导：</strong>主导了 DNN 辅助测距框架的硬件选型（STM32 & ESP32）与底层固件开发。</li>
+                <li lang="en"><strong>Field Testing:</strong> Conducted extensive field testing to identify and mitigate various environmental interference factors.</li>
+                <li lang="zh"><strong>现场测试：</strong>进行了大量的野外实测，识别并减弱了多种环境干扰因素。</li>
             </ul>
         </div>
 
@@ -272,12 +305,12 @@
                 <span class="date">2025.06 — 2025.08</span>
             </div>
             <ul>
-                <li lang="en">Responsible for motor control and differential steering implementation for the unmanned boat.</li>
-                <li lang="zh">负责电调驱动和差速法实现船体转向。</li>
-                <li lang="en">Tuned a PID control algorithm for heading stability, effectively compensating for motor performance differences.</li>
-                <li lang="zh">调试了PID控制算法用于航向稳定，有效弥补了两电机性能差异。</li>
-                <li lang="en">Integrated IMU inertial measurement unit for real-time attitude feedback, achieving precise closed-loop control of differential steering under high-speed navigation.</li>
-                <li lang="zh">集成IMU惯性测量单元提供实时姿态反馈，实现了高速航行状态下差速转向的精准闭环控制。</li>
+                <li lang="en"><strong>Motor Control:</strong> Responsible for motor control and differential steering implementation for the unmanned boat.</li>
+                <li lang="zh"><strong>电机控制：</strong>负责电调驱动和差速法实现船体转向。</li>
+                <li lang="en"><strong>PID Stability:</strong> Tuned a PID control algorithm for heading stability, effectively compensating for motor performance differences.</li>
+                <li lang="zh"><strong>PID 稳定：</strong>调试了 PID 控制算法用于航向稳定，有效弥补了两电机性能差异。</li>
+                <li lang="en"><strong>IMU Integration:</strong> Integrated IMU inertial measurement unit for real-time attitude feedback, achieving precise closed-loop control of differential steering under high-speed navigation.</li>
+                <li lang="zh"><strong>IMU 集成：</strong>集成 IMU 惯性测量单元提供实时姿态反馈，实现了高速航行状态下差速转向的精准闭环控制。</li>
             </ul>
         </div>
 
@@ -288,12 +321,12 @@
                 <span class="date">2024.02 — 2025.06</span>
             </div>
             <ul>
-                <li lang="en">Directed the full lifecycle from schematic design and PCB layout to industrial production.</li>
-                <li lang="zh">主导了从原理图设计、PCB绘制到工业级量产的全流程开发。</li>
-                <li lang="en">Optimized power paths and signal integrity to ensure ultra-low latency for high-speed simulation.</li>
-                <li lang="zh">优化了电源路径与信号完整性，确保了高速模拟下的超低延迟。</li>
-                <li lang="en">Collaborated with global stakeholders to deliver products now sold in international markets.</li>
-                <li lang="zh">与多方合作，产品最终成功销往全球海内外市场。</li>
+                <li lang="en"><strong>Full Hardware Lifecycle:</strong> Directed the full lifecycle from schematic design and PCB layout to industrial production.</li>
+                <li lang="zh"><strong>硬件全周期：</strong>主导了从原理图设计、PCB 绘制到工业级量产的全流程开发。</li>
+                <li lang="en"><strong>Signal & Power Integrity:</strong> Optimized power paths and signal integrity to ensure ultra-low latency for high-speed simulation.</li>
+                <li lang="zh"><strong>电源与信号完整性：</strong>优化了电源路径与信号完整性，确保了高速模拟下的超低延迟。</li>
+                <li lang="en"><strong>Global Delivery:</strong> Collaborated with global stakeholders to deliver products now sold in international markets.</li>
+                <li lang="zh"><strong>全球交付：</strong>与多方合作，产品最终成功销往全球海内外市场。</li>
             </ul>
         </div>
     </section>
@@ -388,7 +421,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Xule Zhou. Updated: March 2026.</p>
+        <p>© 2026 Xule Zhou. Updated: April 2026.</p>
     </footer>
 </div>
 
