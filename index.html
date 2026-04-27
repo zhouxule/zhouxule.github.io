@@ -235,23 +235,49 @@
 
         <div class="item">
             <div class="item-header">
-                <span class="title" lang="en">RK3568-based Industrial-grade High-performance Visual Perception System</span>
-                <span class="title" lang="zh">基于 RK3568 的工业级高性能视觉感知系统开发</span>
+                <span class="title" lang="en">ECG Monitoring Comparison (AD8232 vs ADS1292)</span>
+                <span class="title" lang="zh">心电监护：AD8232 与 ADS1292 功能对比</span>
                 <span class="date">2026.04 — Present</span>
             </div>
             <ul>
-                <li lang="en"><strong>Core stack:</strong> C++ (11/14), Python 3.8, YOLOv8, ONNX Runtime, RKNPU2, OpenCV, CMake, RTSP/H.265, ARM cross-compilation.</li>
-                <li lang="zh"><strong>核心技术栈：</strong>C++ (11/14)、Python 3.8、YOLOv8、ONNX Runtime、RKNPU2、OpenCV、CMake、RTSP/H.265、ARM 交叉编译。</li>
-                <li lang="en"><strong>Project overview:</strong> Delivered a production-ready visual recognition system from PC prototype to RK3568 embedded by migrating algorithms from Python to C++ and leveraging NPU acceleration to solve edge compute limits, latency and RTSP backlog issues.</li>
-                <li lang="zh"><strong>项目概述：</strong>将 PC 端原型迁移到 RK3568 嵌入式平台，算法由 Python 转为 C++，并利用 NPU 加速，解决边缘算力受限、实时性差与 RTSP 流堆积等工程难题。</li>
-                <li lang="en"><strong>Cross-platform inference:</strong> Built ONNX Runtime C++ pipeline on x86_64 with release optimizations and zero-copy memory; converted ONNX→RKNN on ARM64 and implemented INT8/FP16 quantization to fully utilize the RK3568 NPU.</li>
-                <li lang="zh"><strong>跨平台推理：</strong>在 x86_64 上使用 ONNX Runtime C++ 构建高性能推理管线，采用 Release 优化与零拷贝；在 ARM64 上完成 ONNX→RKNN 转换并实现 INT8/FP16 量化以释放 NPU 性能。</li>
-                <li lang="en"><strong>Algorithm & operator tuning:</strong> Fixed normalization-scaling mismatch causing false positives; implemented adaptive geometric mapping to align coordinates between 1080P/4K streams and 640x640 model inputs; integrated optimized NMS and resolved C++ linking symbols.</li>
-                <li lang="zh"><strong>算法与算子级优化：</strong>修复了归一化尺度冲突导致的误报；实现自适应几何映射以解决高分辨率与模型输入间的坐标偏移；集成高效 NMS 并解决链接阶段符号缺失问题。</li>
-                <li lang="en"><strong>RTSP/H.265 stability:</strong> Designed frame-dropping buffer management to reduce 3–5s backlog to sub-100ms end-to-end latency; handled POC missing-frame and cu_qp_delta anomalies to prevent artifacts under network jitter.</li>
-                <li lang="zh"><strong>流媒体稳定性：</strong>设计基于抽帧的缓冲管理将 3–5s 堆积延迟降至 <100ms；捕获并处理 POC 丢帧与 cu_qp_delta 异常，降低网络抖动下的花屏/灰屏故障。</li>
-                <li lang="en"><strong>Engineering & delivery:</strong> Built CMake toolchain cross-compile with sysroot for dynamic linking of ARM OpenCV; used dependency analysis tools to resolve complex runtime library conflicts for robust deployment.</li>
-                <li lang="zh"><strong>工程化与交付：</strong>搭建基于 CMake Toolchain 的交叉编译与 Sysroot 部署方案，实现 ARM OpenCV 动态链接；使用依赖分析工具定位并解决运行时库冲突，保障部署可靠性。</li>
+                <li lang="en"><strong>AD8232 (Finished):</strong> Simple, low-cost single-lead front-end ideal for hobby projects and basic heart-rate monitoring.</li>
+                <li lang="zh"><strong>AD8232（已完成）：</strong>简单低成本的单导联前端，适合爱好者项目与基础心率监测。</li>
+                <li lang="en"><strong>ADS1292 (Pending):</strong> Medical-grade dual/biopotential ADC with higher resolution, integrated PGA and better noise performance for clinical-grade ECG.</li>
+                <li lang="zh"><strong>ADS1292（待验证）：</strong>具备高分辨率、集成 PGA 的医学级双通道 ADC，噪声低，适用于临床级 ECG。</li>
+                <li lang="en"><strong>Comparison:</strong> Evaluating trade-offs between cost, channel count, noise, and integration complexity for targeted monitoring use-cases.</li>
+                <li lang="zh"><strong>对比：</strong>评估成本、通道数、噪声与集成复杂度在不同监护场景下的权衡。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">BLDC FOC & Motor Control Research</span>
+                <span class="title" lang="zh">无刷电机 FOC 与电机控制入门研究</span>
+                <span class="date">2026.04 — Present</span>
+            </div>
+            <ul>
+                <li lang="en"><strong>Platform:</strong> Based on STM32G4 series for FOC-capable control and high-resolution PWM.</li>
+                <li lang="zh"><strong>平台：</strong>基于 STM32G4 系列，支持 FOC 控制与高分辨率 PWM。</li>
+                <li lang="en"><strong>Control goals:</strong> Implement closed-loop speed/position and current-loop control with encoder and current-sensor feedback.</li>
+                <li lang="zh"><strong>控制目标：</strong>实现速度/位置闭环与电流环控制，使用编码器与电流传感器做反馈。</li>
+                <li lang="en"><strong>Focus:</strong> Study PLL/observer-based FOC, current sensing, and protection strategies for reliable BLDC drive.</li>
+                <li lang="zh"><strong>研究重点：</strong>探索基于观测器/PLL 的 FOC、电流检测与保护策略，提升 BLDC 驱动可靠性。</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="title" lang="en">RK3568-based Industrial-grade High-performance Visual Perception System</span>
+                <span class="title" lang="zh">基于 RK3568 的工业级高性能视觉感知系统开发</span>
+                <span class="date">2026.03 — 2026.04</span>
+            </div>
+            <ul>
+                <li lang="en"><strong>Embedded inference:</strong> Ported key vision models to RK3568 with ONNX→RKNN conversion and NPU acceleration.</li>
+                <li lang="zh"><strong>嵌入式推理：</strong>将关键视觉模型迁移至 RK3568，完成 ONNX→RKNN 转换并启用 NPU 加速。</li>
+                <li lang="en"><strong>Latency & stability:</strong> Tuned pipeline and buffering to reduce latency and improve stream stability for RTSP feeds.</li>
+                <li lang="zh"><strong>延迟与稳定性：</strong>优化推理管线与缓冲策略，降低延迟并提升 RTSP 流媒体稳定性。</li>
+                <li lang="en"><strong>Engineering:</strong> Cross-compile toolchain and deployment packaging for reliable edge delivery.</li>
+                <li lang="zh"><strong>工程交付：</strong>搭建交叉编译链与部署打包方案，保障边缘设备可靠交付。</li>
             </ul>
         </div>
 
@@ -259,15 +285,15 @@
             <div class="item-header">
                 <span class="title" lang="en">Marine AIS Signal Reception & Decoding</span>
                 <span class="title" lang="zh">低成本船用AIS信号接收与解码研究</span>
-                <span class="date">2025.10 — Present</span>
+                <span class="date">2025.10 — 2026.04</span>
             </div>
             <ul>
-                <li lang="en"><strong>GMSK Demodulation & SDR:</strong> Researching low-cost GMSK demodulation algorithms for real-time maritime signal processing.</li>
-                <li lang="zh"><strong>GMSK 解调与 SDR：</strong>研究用于实时海事信号处理的低成本 GMSK 解调算法。</li>
-                <li lang="en"><strong>Performance Optimization:</strong> Optimizing software-defined radio (SDR) performance to improve decoding sensitivity on embedded platforms.</li>
-                <li lang="zh"><strong>性能优化：</strong>优化软件定义无线电（SDR）性能，以提升嵌入式平台上的解码灵敏度。</li>
-                <li lang="en"><strong>Hardware Throughput:</strong> Exploring hardware-defined architectures to maintain high data throughput in complex RF environments.</li>
-                <li lang="zh"><strong>硬件吞吐：</strong>探索硬件定义架构，旨在复杂电磁环境下保持高数据吞吐量。</li>
+                <li lang="en"><strong>RX / decode split:</strong> MSP430 handles RF reception and pre-processing, ESP32-C3 performs display, data processing and decodes 27 AIS message types.</li>
+                <li lang="zh"><strong>接收与解码分工：</strong>MSP430 负责射频接收与预处理，ESP32-C3 负责显示、数据处理并解码 27 类 AIS 信息。</li>
+                <li lang="en"><strong>Low-cost SDR:</strong> Implemented lightweight GMSK demodulation and embedded decoding for real-time reception on constrained hardware.</li>
+                <li lang="zh"><strong>低成本 SDR：</strong>实现简化的 GMSK 解调与嵌入式解码，支持在受限硬件上实时接收。</li>
+                <li lang="en"><strong>Prototype & UI:</strong> Completed a working prototype including PCB and enclosure; UI displays per-message vessel fields such as MMSI, vessel name, dimensions, destination, latitude/longitude, etc.</li>
+                <li lang="zh"><strong>原型与界面：</strong>已完成包含 PCB 与外壳的可运行原型；界面能根据接收信息显示 MMSI、船名、尺寸、目的地、经纬度等字段。</li>
             </ul>
         </div>
 
@@ -282,18 +308,12 @@
                 <p lang="zh"><strong>开源地址：</strong> <a href="https://github.com/zhouxule/IoT-Environmental-Monitor" target="_blank">github.com/zhouxule/IoT-Environmental-Monitor</a></p>
             </div>
             <ul>
-                <li lang="en"><strong>Full-stack PlatformIO Design:</strong> Original PlatformIO + ESP32 design using SquareLine Studio with LVGL 9.1.0, implementing full hardware and firmware solution from scratch, including component selection, schematics, PCB, firmware development, and enclosure modeling and iteration.</li>
-                <li lang="zh"><strong>整套方案设计：</strong>基于 PlatformIO + ESP32 的原创设计，使用 SquareLine Studio 搭配 LVGL 9.1.0 进行界面设计与集成，从零实现硬件与固件的整套方案，包括方案选型、原理图、PCB、固件开发、外壳建模与迭代。</li>
-                <li lang="en"><strong>RTOS Scheduling:</strong> <strong>FreeRTOS</strong>-based task scheduling for I2C (SHT40, SGP41, SCD4x, BMP280, PM sensors), UART (formaldehyde sensor), and data reporting; periodic precise timing ensures stable sampling for robust multi-sensor scheduling.</li>
-                <li lang="zh"><strong>RTOS 调度：</strong>基于 <strong>FreeRTOS</strong> 设计任务调度，包括 I2C（SHT40、SGP41、SCD4x、BMP280、PM 传感器）、串口（甲醛传感器）与数据上报，使用周期性精确定时保证采样稳定性，实现鲁棒的多传感器调度。</li>
-                <li lang="en"><strong>Bus Protection:</strong> Protected the I2C bus with FreeRTOS mutexes and used a non-blocking queue enqueue strategy to return sensor data, avoiding blocking and race conditions.</li>
-                <li lang="zh"><strong>总线保护：</strong>为保护 I2C 总线实现 FreeRTOS 互斥锁，并采用消息队列的非阻塞入队策略将传感器数据回传，避免阻塞与竞态条件。</li>
-                <li lang="en"><strong>UX & Dashboards:</strong> Implemented a dashboard displaying 11 environmental metrics; supports gesture swipe, tap-to-open charts, and dropdown menu interactions, with line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
-                <li lang="zh"><strong>界面与图表：</strong>实现包含 11 项环境监测数据的仪表盘，支持手势滑动、点击弹出图表与下拉菜单交互，并支持 1 分钟 / 1 小时 / 24 小时 三档窗口实时刷新的折线图，使用环形缓冲聚合数据并展示历史趋势。</li>
-                <li lang="en"><strong>Visualization Backend:</strong> Developed interactive line charts supporting 1-minute / 1-hour / 24-hour windows with real-time refresh, using circular buffers to aggregate and present historical trends.</li>
-                <li lang="zh"><strong>可视化后端：</strong>实现了完整的可视化网页与基于 HTTPS 的 JSON 上报模块，接入 Supabase Functions，便于后端数据库与前端面板展示。</li>
-                <li lang="en"><strong>Persistence & Modularity:</strong> Configured SPIFFS filesystem for persistence and local configuration storage; modular, decoupled code structure for easy future extension.</li>
-                <li lang="zh"><strong>持久化与模块化：</strong>配置 SPIFFS 文件系统以支持持久化与本地配置存储，代码模块化解耦便于后续扩展。</li>
+                <li lang="en"><strong>Design & RTOS:</strong> PlatformIO + ESP32 original design combining hardware and firmware development with FreeRTOS task scheduling for multi-sensor sampling (I2C devices and UART sensors).</li>
+                <li lang="zh"><strong>方案与 RTOS：</strong>PlatformIO + ESP32 原创设计，合并硬件与固件开发并使用 FreeRTOS 实现多传感器采样调度（I2C 与串口传感器）。</li>
+                <li lang="en"><strong>Bus Protection:</strong> I2C bus protection via FreeRTOS mutexes and non-blocking queue strategies to avoid blocking and race conditions.</li>
+                <li lang="zh"><strong>总线保护：</strong>通过 FreeRTOS 互斥锁与非阻塞消息队列策略保护 I2C 总线，避免阻塞与竞态。</li>
+                <li lang="en"><strong>UI & Visualization:</strong> SquareLine Studio + LVGL 9.1.0 touch dashboard for 11 metrics with gesture interactions and interactive charts; HTTPS JSON reporting integrated with Supabase Functions for backend dashboards.</li>
+                <li lang="zh"><strong>界面与可视化：</strong>使用 SquareLine Studio 与 LVGL 9.1.0 构建触控仪表盘（11 项指标、手势交互、交互式图表）；通过 HTTPS JSON 上报接入 Supabase Functions 支持后端面板展示。</li>
             </ul>
         </div>
 
