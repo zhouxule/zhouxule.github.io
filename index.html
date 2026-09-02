@@ -108,26 +108,25 @@
         ul { padding-left: 18px; margin: 10px 0; color: var(--text-sub); font-size: 0.88rem; }
         li { margin-bottom: 6px; }
 
-        .pub-box {
-            padding: 15px 0;
+        /* 统一左侧边框样式：用于 Publication 和 Repo-link */
+        .left-border-box {
+            padding: 6px 0 6px 20px;
             font-size: 0.88rem;
             border-left: 2px solid var(--accent);
-            padding-left: 20px;
-            margin: 20px 0;
+            margin: 12px 0;
+            line-height: 1.4;
         }
 
-        .pub-box a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
+        .left-border-box p {
+            margin: 2px 0;
+        }
 
-        .repo-link {
-            padding: 15px 0;
-            font-size: 0.88rem;
-            border-left: 2px solid var(--accent);
-            padding-left: 20px;
-            margin: 20px 0;
+        .left-border-box a {
             color: var(--text-main);
-            background: none;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 600;
         }
-        .repo-link a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
 
           [lang="zh"] { display: none; }
           /* Use `revert` so elements reset to their user-agent defaults
@@ -160,6 +159,8 @@
                 <span>📧 bread.zhou@hotmail.com</span>
                 <span>📞 (+86) 188-9675-5660</span>
                 <span>📍 Suzhou, China</span>
+                <br>
+                <span>🌐 <a href="https://www.zhouxule.com" target="_blank" style="color: var(--text-sub); text-decoration: underline; text-underline-offset: 3px;">www.zhouxule.com</a></span>
             </div>
         </div>
         <button class="lang-switch" onclick="document.body.classList.toggle('zh-mode')">CH / EN</button>
@@ -172,7 +173,7 @@
             <div class="item-header">
                 <span class="title" lang="en">Xi'an Jiaotong-Liverpool University (XJTLU) / University of Liverpool (UoL)</span>
                 <span class="title" lang="zh">西交利物浦大学 / 英国利物浦大学</span>
-                <span class="date">2023.09 — 2027.06</span>
+                <span class="date">2023.09 — 2027.07</span>
             </div>
             <div class="subtitle">
                 <span lang="en">B.Eng. in Microelectronics Science and Engineering</span>
@@ -187,6 +188,83 @@
         </div>
     </section>
 
+    <section>
+        <h2 lang="en">Work Experience</h2>
+        <h2 lang="zh">工作经历</h2>
+
+        <div class="item">
+
+            <div class="item-header">
+                <div class="company-title">
+                    <span class="title" lang="en">Bosch (China) Investment Co., Ltd. Suzhou Branch</span>
+                    <span class="title" lang="zh">博世（中国）投资有限公司苏州分公司</span>
+                    <span class="subtitle" lang="en">Indirect Purchasing & AI Automation Intern</span>
+                    <span class="subtitle" lang="zh">间接采购与AI自动化实习生</span>
+                </div>
+                <span class="date">2026.06 — Present</span>
+            </div>
+
+            <ul>
+
+                <li lang="en">
+                    <strong>AI & Process Automation:</strong>
+                    Developed Excel VBA automation tools to streamline supplier follow-up workflows, including cross-sheet data matching, duplicate consolidation, supplier email lookup, dynamic email generation, and automated CC configuration, reducing hours of repetitive work to seconds.
+                </li>
+                <li lang="zh">
+                    <strong>AI 与流程自动化：</strong>
+                    使用 Excel VBA 开发供应商催单自动化工具，实现跨表匹配、重复项合并、供应商邮箱查询、邮件正文自动生成及 CC 自动配置，将原本数小时的重复工作压缩至数秒。
+                </li>
+
+                <li lang="en">
+                    <strong>End-to-End Workflow Automation:</strong>
+                    Built a Microsoft Forms + Power Automate workflow for hundreds of suppliers, automatically collecting questionnaire responses, cleaning heterogeneous supplier data, matching suppliers, and writing structured results into a centralized Excel database stored on OneDrive.
+                </li>
+                <li lang="zh">
+                    <strong>端到端流程自动化：</strong>
+                    基于 Microsoft Forms + Power Automate 为上百家供应商搭建自动化数据流，实现问卷收集、异构数据清洗、供应商匹配及结果自动写入 OneDrive 中的集中式 Excel 数据库，实现从邮件发送、信息收集到数据回写的全流程自动化。
+                </li>
+
+                <li lang="en">
+                    <strong>AI Agent Development:</strong>
+                    Designed and implemented an AI-powered procurement assistant using Bosch Dify, AskBosch, Gemini Enterprise, APIs, OneDrive supplier databases, and semantic retrieval. The agent automatically reads incoming emails, identifies procurement and supplier recommendation requests, retrieves relevant suppliers based on semantic relationships, generates HTML-formatted responses, and routes them to human review.
+                </li>
+                <li lang="zh">
+                    <strong>AI Agent 开发：</strong>
+                    基于 Bosch Dify、AskBosch、Gemini Enterprise、API、OneDrive 供应商数据库及语义检索技术开发采购 AI Agent，实现邮件自动读取、采购需求识别、供应商语义检索、HTML 邮件生成及人工审核流程。
+                </li>
+
+                <li lang="en">
+                    <strong>AI Workflow Integration:</strong>
+                    Integrated the AI Agent with Microsoft Power Platform through APIs, enabling automated email triggering and response workflows. Improved semantic matching for industrial terminology and indirect supplier queries, allowing the system to identify related supplier categories even when exact keywords were absent from the knowledge base.
+                </li>
+                <li lang="zh">
+                    <strong>AI 流程集成：</strong>
+                    通过 API 将 Bosch Dify 与 Microsoft Power Platform 集成，实现 AI Agent 的自动邮件触发与回复流程。针对同义及上下位概念，以及指定品牌但数据库缺少直接代理商等复杂查询，优化语义匹配与供应商推荐逻辑。
+                </li>
+
+                <li lang="en">
+                    <strong>Supplier & Procurement:</strong>
+                    Participated in the localization and localization sourcing project for a Bosch Vietnam plant. Communicated with overseas colleagues and suppliers in English, visited supplier factories and production lines in Wuxi and Kunshan, and supported supplier evaluation, quotation analysis, comparison, scoring, and technical assessment.
+                </li>
+                <li lang="zh">
+                    <strong>供应商与采购：</strong>
+                    参与博世越南工厂国产化及本地化项目，与越南同事及供应商进行英文沟通，参观无锡、昆山供应商工厂及生产车间，并参与供应商评估、询价、报价对比、评分及技术分析。
+                </li>
+
+                <li lang="en">
+                    <strong>Cross-functional Collaboration:</strong>
+                    Worked across procurement, IT, suppliers, and international teams, while supporting workshops, supplier reception, event planning, logistics, and photography. Developed practical experience in communication, coordination, execution, and problem solving within a multinational manufacturing organization.
+                </li>
+                <li lang="zh">
+                    <strong>跨部门协作：</strong>
+                    与采购、IT、供应商及海外团队进行跨部门、跨地区协作，同时参与 Workshop 策划、物资准备、供应商接待及摄影等工作，提升了在跨国制造企业环境中的沟通、协调、执行与问题解决能力。
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
 
     <section>
         <h2 lang="en">Personal Abilities</h2>
@@ -219,11 +297,12 @@
                 </li>
             </ul>
         </div>
+    </section>
 
     <section>
         <h2 lang="en">Publication</h2>
         <h2 lang="zh">学术论文</h2>
-        <div class="pub-box">
+        <div class="left-border-box">
             Yiqing Zhou, <strong>Xule Zhou</strong>, Zecan Cheng, Chenao Lu, et al., "Impact of environmental factors on LoRa 2.4 GHz time of flight ranging outdoors," <em>accepted for presentation at GCA'25</em>, Sep. 2025. <br>
             <a href="https://arxiv.org/abs/2509.23125" target="_blank">[arXiv:2509.23125]</a>
         </div>
@@ -233,27 +312,16 @@
         <h2 lang="en">Research & Projects</h2>
         <h2 lang="zh">科研与项目经历</h2>
 
-        <div class="item">
-            <div class="item-header">
-                <span class="title" lang="en">ECG Monitoring Comparison (AD8232 vs ADS1292)</span>
-                <span class="title" lang="zh">心电监护：AD8232 与 ADS1292 功能对比</span>
-                <span class="date">2026.04 — Present</span>
-            </div>
-            <ul>
-                <li lang="en"><strong>AD8232 (Finished):</strong> Simple, low-cost single-lead front-end ideal for hobby projects and basic heart-rate monitoring.</li>
-                <li lang="zh"><strong>AD8232（已完成）：</strong>简单低成本的单导联前端，适合爱好者项目与基础心率监测。</li>
-                <li lang="en"><strong>ADS1292 (Pending):</strong> Medical-grade dual/biopotential ADC with higher resolution, integrated PGA and better noise performance for clinical-grade ECG.</li>
-                <li lang="zh"><strong>ADS1292（待验证）：</strong>具备高分辨率、集成 PGA 的医学级双通道 ADC，噪声低，适用于临床级 ECG。</li>
-                <li lang="en"><strong>Comparison:</strong> Evaluating trade-offs between cost, channel count, noise, and integration complexity for targeted monitoring use-cases.</li>
-                <li lang="zh"><strong>对比：</strong>评估成本、通道数、噪声与集成复杂度在不同监护场景下的权衡。</li>
-            </ul>
+        <div class="left-border-box" style="margin-bottom: 25px;">
+            <p lang="en"><strong>Portfolio:</strong> <a href="https://www.zhouxule.com/portfolio" target="_blank">www.zhouxule.com/portfolio</a></p>
+            <p lang="zh"><strong>作品集：</strong> <a href="https://www.zhouxule.com/portfolio" target="_blank">www.zhouxule.com/portfolio</a></p>
         </div>
 
         <div class="item">
             <div class="item-header">
                 <span class="title" lang="en">BLDC FOC & Motor Control Research</span>
                 <span class="title" lang="zh">无刷电机 FOC 与电机控制入门研究</span>
-                <span class="date">2026.04 — Present</span>
+                <span class="date">2026.04 — 2026.06</span>
             </div>
             <ul>
                 <li lang="en"><strong>Platform:</strong> Based on STM32G4 series for FOC-capable control and high-resolution PWM.</li>
@@ -303,7 +371,7 @@
                 <span class="title" lang="zh">ESP32物联网环境监测系统（全栈开发）</span>
                 <span class="date">2025.09 — 2025.12</span>
             </div>
-            <div class="repo-link">
+            <div class="left-border-box">
                 <p lang="en"><strong>Open-source:</strong> <a href="https://github.com/zhouxule/IoT-Environmental-Monitor" target="_blank">github.com/zhouxule/IoT-Environmental-Monitor</a></p>
                 <p lang="zh"><strong>开源地址：</strong> <a href="https://github.com/zhouxule/IoT-Environmental-Monitor" target="_blank">github.com/zhouxule/IoT-Environmental-Monitor</a></p>
             </div>
@@ -330,22 +398,6 @@
                 <li lang="zh"><strong>硬件与固件领导：</strong>主导了 DNN 辅助测距框架的硬件选型（STM32 & ESP32）与底层固件开发。</li>
                 <li lang="en"><strong>Field Testing:</strong> Conducted extensive field testing to identify and mitigate various environmental interference factors.</li>
                 <li lang="zh"><strong>现场测试：</strong>进行了大量的野外实测，识别并减弱了多种环境干扰因素。</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="title" lang="en">2025 XJTLU Unmanned Robotics Boat Challenge</span>
-                <span class="title" lang="zh">2025 西交利物浦大学无人船挑战赛</span>
-                <span class="date">2025.06 — 2025.08</span>
-            </div>
-            <ul>
-                <li lang="en"><strong>Motor Control:</strong> Responsible for motor control and differential steering implementation for the unmanned boat.</li>
-                <li lang="zh"><strong>电机控制：</strong>负责电调驱动和差速法实现船体转向。</li>
-                <li lang="en"><strong>PID Stability:</strong> Tuned a PID control algorithm for heading stability, effectively compensating for motor performance differences.</li>
-                <li lang="zh"><strong>PID 稳定：</strong>调试了 PID 控制算法用于航向稳定，有效弥补了两电机性能差异。</li>
-                <li lang="en"><strong>IMU Integration:</strong> Integrated IMU inertial measurement unit for real-time attitude feedback, achieving precise closed-loop control of differential steering under high-speed navigation.</li>
-                <li lang="zh"><strong>IMU 集成：</strong>集成 IMU 惯性测量单元提供实时姿态反馈，实现了高速航行状态下差速转向的精准闭环控制。</li>
             </ul>
         </div>
 
@@ -390,6 +442,12 @@
             <li lang="en"><strong>Efficiency:</strong> Focused on productivity methodologies and long-term feedback; valuing sustainable growth.</li>
             <li lang="zh"><strong>效率主义：</strong> 关注提升生产力的方法论，注重“长期主义”带来的反馈与个人成长。</li>
         </ul>
+
+        <div class="left-border-box" style="margin-top: 16px;">
+            <p lang="en"><strong>Gallery:</strong> <a href="https://www.zhouxule.com/gallery" target="_blank">www.zhouxule.com/gallery</a></p>
+            <p lang="zh"><strong>摄影作品集：</strong> <a href="https://www.zhouxule.com/gallery" target="_blank">www.zhouxule.com/gallery</a></p>
+        </div>
+
     </section>
 
     <section>
@@ -456,7 +514,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Xule Zhou. Updated: April 2026.</p>
+        <p>© 2026 Xule Zhou. Updated: Sep 2026.</p>
     </footer>
 </div>
 
