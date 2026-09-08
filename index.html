@@ -146,6 +146,234 @@
             .item-header { flex-direction: column; }
             .date { margin-top: 4px; }
         }
+
+        /* =========================================================
+        A4 CV Print Mode
+        Ctrl + P / Browser Print Preview only
+        ========================================================= */
+
+        @media print {
+
+        /* ---------- A4 page ---------- */
+        @page {
+            size: A4;
+            margin: 12mm 14mm 12mm 14mm;
+        }
+
+        /* ---------- Global ---------- */
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: #fff !important;
+            color: #000 !important;
+
+            font-size: 9pt;
+            line-height: 1.35;
+        }
+
+        /* ---------- Hide screen-only elements ---------- */
+        .lang-switch,
+        footer {
+            display: none !important;
+        }
+
+        /* ---------- Main container ---------- */
+        .container {
+            width: auto;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* =======================================================
+            HEADER
+            ======================================================= */
+
+        header {
+            margin-bottom: 22px;
+            padding: 0;
+        }
+
+        .header-left h1 {
+            font-size: 18pt;
+            line-height: 1.1;
+            margin: 0 0 5px 0;
+        }
+
+        .contact-info {
+            font-size: 8pt;
+            line-height: 1.35;
+        }
+
+        .contact-info span {
+            margin-right: 10px;
+        }
+
+        /* =======================================================
+            SECTION
+            ======================================================= */
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 8.5pt;
+            line-height: 1.2;
+            letter-spacing: 0.08em;
+
+            padding-bottom: 4px;
+            margin: 0 0 11px 0;
+
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 9pt;
+            line-height: 1.2;
+
+            margin: 11px 0 5px 0;
+
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        /* =======================================================
+            EXPERIENCE / PROJECT / EDUCATION ITEMS
+            ======================================================= */
+
+        .item {
+            margin-bottom: 16px;
+
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .item-header {
+            margin-bottom: 2px;
+
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        .title {
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 8pt;
+            line-height: 1.25;
+
+            margin-bottom: 3px;
+        }
+
+        .date {
+            font-size: 7.5pt;
+            line-height: 1.2;
+        }
+
+        /* =======================================================
+            BULLET LIST
+            ======================================================= */
+
+        ul {
+            margin: 4px 0;
+            padding-left: 15px;
+
+            font-size: 8pt;
+            line-height: 1.32;
+        }
+
+        li {
+            margin-bottom: 2px;
+        }
+
+        /* Don't split an individual bullet across pages */
+        li {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        /* =======================================================
+            PUBLICATION / REPOSITORY / DESCRIPTION BOX
+            ======================================================= */
+
+        .left-border-box {
+            padding: 3px 0 3px 10px;
+            margin: 6px 0;
+
+            font-size: 8pt;
+            line-height: 1.28;
+
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .left-border-box p {
+            margin: 1px 0;
+        }
+
+        /* =======================================================
+            BADGES / SKILLS
+            ======================================================= */
+
+        .badge-list {
+            gap: 4px;
+        }
+
+        .badge-list img {
+            height: 20px;
+            width: auto;
+        }
+
+        /* =======================================================
+            LINKS
+            ======================================================= */
+
+        a {
+            color: #000 !important;
+            text-decoration: underline;
+        }
+
+        /* =======================================================
+            PAGE BREAK CONTROL
+            ======================================================= */
+
+        h2,
+        h3 {
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        .item-header {
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        /* =======================================================
+            IMAGES
+            ======================================================= */
+
+        img {
+            max-width: 100%;
+        }
+
+        /* =======================================================
+            PRINT COLORS
+            ======================================================= */
+
+        *,
+        *::before,
+        *::after {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        }
+
     </style>
 </head>
 <body>
