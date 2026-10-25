@@ -609,12 +609,17 @@
                 <span class="date">2026.03 — 2026.04</span>
             </div>
             <ul>
-                <li lang="en"><strong>Embedded inference & AI Assistance:</strong> Ported key vision models to RK3568 with ONNX→RKNN conversion and NPU acceleration; utilized AI-assisted coding to accelerate deployment and debugging.</li>
-                <li lang="zh"><strong>嵌入式推理与 AI 辅助：</strong>将关键视觉模型迁移至 RK3568，完成 ONNX→RKNN 转换并启用 NPU 加速；借助 AI 辅助编码加速部署与调试。</li>
-                <li lang="en"><strong>Latency & stability:</strong> Tuned pipeline and buffering to reduce latency and improve stream stability for RTSP feeds.</li>
-                <li lang="zh"><strong>延迟与稳定性：</strong>优化推理管线与缓冲策略，降低延迟并提升 RTSP 流媒体稳定性。</li>
-                <li lang="en"><strong>Engineering:</strong> Cross-compile toolchain and deployment packaging for reliable edge delivery.</li>
-                <li lang="zh"><strong>工程交付：</strong>搭建交叉编译链与部署打包方案，保障边缘设备可靠交付。</li>
+                <li lang="en"><strong>Platform Migration & AI-Assisted Refactoring:</strong> Migrated the PC prototype from Python to C++ on the RK3568 platform to overcome edge computing constraints. Utilized AI-assisted coding to accelerate code translation, while independently handling the core pipeline design, ONNX→RKNN conversion, and INT8/FP16 quantization to unleash NPU performance.</li>
+                <li lang="zh"><strong>平台迁移与 AI 辅助重构：</strong>为解决边缘算力受限与实时性差的问题，将 PC 端 Python 原型迁移至 RK3568 嵌入式平台。借助 AI 辅助编码加速 C++ 代码翻译与重构，并独立主导核心管线设计，完成 ONNX→RKNN 转换与 INT8/FP16 量化，充分释放 NPU 性能。</li>
+                
+                <li lang="en"><strong>Algorithm & Operator Optimization:</strong> Resolved scale-conflict-induced false positives in normalization; implemented adaptive geometric mapping to fix coordinate offsets between high-res inputs and model requirements; integrated efficient NMS and solved linker symbol-missing issues.</li>
+                <li lang="zh"><strong>算法与算子级优化：</strong>修复了归一化尺度冲突导致的误报；实现自适应几何映射以解决高分辨率与模型输入间的坐标偏移；集成高效 NMS 并解决链接阶段符号缺失问题。</li>
+                
+                <li lang="en"><strong>Streaming Stability:</strong> Designed a frame-sampling buffer management strategy to reduce RTSP feed latency from 3–5s to <100ms; captured and handled POC frame drops and cu_qp_delta anomalies to mitigate screen distortion under network jitter.</li>
+                <li lang="zh"><strong>流媒体稳定性：</strong>设计基于抽帧的缓冲管理策略，将 RTSP 流堆积延迟从 3–5s 降至 <100ms；捕获并处理 POC 丢帧与 cu_qp_delta 异常，大幅降低网络抖动下的花屏/灰屏故障。</li>
+                
+                <li lang="en"><strong>Engineering & Deployment:</strong> Established a CMake Toolchain-based cross-compilation and Sysroot deployment solution, achieving dynamic linking for ARM OpenCV; utilized dependency analysis tools to locate and resolve runtime library conflicts, ensuring reliable edge deployment.</li>
+                <li lang="zh"><strong>工程化与交付：</strong>搭建基于 CMake Toolchain 的交叉编译与 Sysroot 部署方案，实现 ARM OpenCV 动态链接；使用依赖分析工具定位并解决运行时库冲突，保障边缘设备的可靠交付。</li>
             </ul>
         </div>
 
